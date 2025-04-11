@@ -32,18 +32,33 @@ class HomeColunas extends StatelessWidget {
       body: Column(
         children: [
           Text(
-            "Tela de Login",
+            "Faça seu Login",
             style: TextStyle(
               fontSize: 30,
               color: const Color.fromARGB(255, 0, 0, 0),
             ),
           ),
+
+          SizedBox(height: 20),
           TextFormField(
             decoration: InputDecoration(
               labelText: "Usuário",
               labelStyle: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
               border: OutlineInputBorder(),
             ),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+              labelText: "Senha",
+              labelStyle: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
+              border: OutlineInputBorder(),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print("Botão pressionado!");
+            },
+            child: Text("Entrar"),
           ),
         ],
       ),
